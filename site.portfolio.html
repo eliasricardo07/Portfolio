@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elias Ricardo – Portfólio</title>
+  <meta name="description" content="Portfólio de Elias Ricardo – Analista de Dados | Power BI. Transformando dados em decisões inteligentes. Projetos em BI, Web e Automação." />
+  <meta property="og:title" content="Elias Ricardo – Portfólio" />
+  <meta property="og:description" content="Analista de Dados | Power BI. Transformando dados em decisões inteligentes." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <link rel="icon" href="assets/favicon.png" />
+
+  <meta property="og:image" content="https://eliasricardo07.github.io/Portfolio/img/banner-tecnologia-preto.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="396" />
+
+  <style>
+    :root{
+      --bg:#0b0b0c;--fg:#f6f7f8;--muted:#a1a1aa;--card:#121215;--border:#232327;
+      --link:#93c5fd;--brand:#60a5fa;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1200px 800px at 10% -10%,rgba(96,165,250,.15),transparent),linear-gradient(180deg,#0a0a0b,#000);color:var(--fg)}
+    a{color:var(--link);text-decoration:none}
+    a:hover{opacity:.92}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* NAV */
+    .nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(0,0,0,.35);border-bottom:1px solid var(--border);z-index:10}
+    .nav-inner{height:56px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .nav-links{display:flex;gap:20px;font-size:.95rem}
+    .nav-links a{padding:6px 10px;border-radius:10px}
+    .nav-links a:hover{background:rgba(255,255,255,.06)}
+    /* HERO */
+    .hero{padding:48px 0 24px;border-bottom:1px solid var(--border)}
+    .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:24px;align-items:center}
+    .title{font-size:clamp(28px,4.2vw,44px);line-height:1.1;margin:0 0 10px}
+    .subtitle{font-weight:600;color:#cdd7ff;margin:0 0 8px}
+    .tagline{color:var(--muted);margin:0 0 16px}
+    .profile{justify-self:end}
+    .profile img{width:160px;height:160px;border-radius:22px;object-fit:cover;border:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--brand);color:#081018;padding:10px 14px;border-radius:12px;font-weight:700}
+    .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--border)}
+    /* SECTION */
+    section{padding:42px 0}
+    h2{font-size:clamp(20px,3.2vw,30px);margin:0 0 16px}
+    p.lead{color:#dbeafe}
+    .grid{display:grid;gap:16px}
+    /* SOBRE */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#0f172a;border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:.9rem;color:#e5e7eb}
+    /* LINGUAGENS (por projeto) */
+    .langbar{height:10px;background:#0f1220;border-radius:999px;overflow:hidden;border:1px solid var(--border);margin:8px 0 2px}
+    .langbar > span{display:inline-block;height:100%}
+    .lang-HTML{background:#f97316}
+    .lang-CSS{background:#8b5cf6}
+    .lang-JS{background:#facc15}
+    .langs-legend{display:flex;gap:16px;color:var(--muted);font-size:.9rem}
+    .dot{width:8px;height:8px;border-radius:999px;display:inline-block;margin-right:6px}
+    /* PROJETOS */
+    .projects{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .project{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+    .project .visual{background:#0f1220}
+    .project .visual iframe{border:0;width:100%;aspect-ratio:16/10;background:#0a0a0b}
+    .project .content{padding:14px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+    .badge{background:#0f172a;border:1px solid var(--border);color:#d1d5db;font-size:.85rem;padding:4px 8px;border-radius:999px}
+    .steps{margin:10px 0 0;color:#cbd5e1}
+    .steps li{margin:6px 0}
+    /* CONTATO */
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+    .footer{border-top:1px solid var(--border);padding:16px 0 40px;color:var(--muted);font-size:.95rem}
+
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .profile{justify-self:start}
+      .about{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Elias Ricardo</div>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="subtitle">Analista de Dados | Power BI</p>
+        <h1 class="title">Elias Ricardo</h1>
+        <p class="tagline">Transformando dados em decisões inteligentes</p>
+        <div class="cta">
+          <a class="btn" href="#projetos">Ver projetos</a>
+          <a class="btn ghost" href="#contato">Falar comigo</a>
+        </div>
+      </div>
+      <div class="profile">
+        <img src="./img/perfil.jpeg" alt="Foto de perfil de Elias Ricardo"
+     style="border-radius:22px;width:160px;height:160px;object-fit:cover;border:1px solid #232327;box-shadow:0 8px 30px rgba(0,0,0,.35)" />
+
+      </div>
+    </div>
+  </header>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <h2>Sobre mim</h2>
+      <div class="about">
+        <div class="card">
+          <p class="lead">Sou Analista de Dados focado em Power BI e automação de processos. Tenho experiência em montar dashboards limpos e objetivos, conectando diferentes fontes de dados e documentando o passo a passo do projeto para facilitar a manutenção e a tomada de decisão.</p>
+          <h3>Ferramentas que domino</h3>
+          <div class="chips">
+            <span class="chip">Power BI (DAX)</span>
+            <span class="chip">Power Query</span>
+            <span class="chip">Excel Avançado</span>
+            <span class="chip">SQL básico</span>
+            <span class="chip">GitHub & GitHub Pages</span>
+            <span class="chip">HTML & CSS</span>
+            <span class="chip">Google Colab</span>
+          </div>
+          <h3 style="margin-top:12px">Aprendendo</h3>
+          <div class="chips">
+            <span class="chip">Python para Análise de Dados</span>
+            <span class="chip">Banco de Dados</span>
+            <span class="chip">SQLite (consultas)</span>
+            <span class="chip">Git</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Barras de Linguagens (por projeto)</h3>
+          <p style="color:var(--muted);margin-top:6px">Estas barras aparecem apenas nos <strong>projetos que envolveram programação</strong>. Exemplo do site Expresso Coroado:</p>
+          <div class="langbar" aria-label="Stack do projeto">
+            <span class="lang-HTML" style="width:48.9%"></span>
+            <span class="lang-CSS" style="width:45%"></span>
+            <span class="lang-JS" style="width:6.1%"></span>
+          </div>
+          <div class="langs-legend">
+            <span><span class="dot lang-HTML"></span>HTML 48,9%</span>
+            <span><span class="dot lang-CSS"></span>CSS 45,0%</span>
+            <span><span class="dot lang-JS"></span>JavaScript 6,1%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <div class="container">
+      <h2>Projetos</h2>
+
+      <div class="projects">
+        <!-- PROJETO POWER BI - Expresso Coroado -->
+<article class="project">
+  <div class="visual">
+    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiN2UwMmYzN2QtNjUxZi00ZTdjLWJlNjUtMWRhMTMzZjc0MjRlIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9" 
+      loading="lazy" allowfullscreen title="Dashboard – Expresso Coroado"></iframe>
+  </div>
+
+  <div class="content">
+    <h3 style="margin:0 0 6px">Dashboard – Análise Operacional de Frotas</h3>
+    <div class="badges">
+      <span class="badge">Power BI</span>
+      <span class="badge">DAX</span>
+      <span class="badge">ETL</span>
+    </div>
+
+    <p>Dashboard desenvolvido para acompanhamento de KPIs operacionais da Expresso Coroado, com foco em custos, produtividade e desempenho. Permite filtros por período e tipo de movimento, auxiliando na tomada de decisão rápida e precisa.</p>
+
+    <ol class="steps">
+      <li>Modelagem e preparação de dados (ETL básico em Power BI Desktop)</li>
+      <li>Criação de medidas DAX para indicadores e métricas</li>
+      <li>Estrutura de relatórios segmentados por área (Financeiro, Operações e Logística)</li>
+      <li>Publicação e integração com equipe gestora</li>
+    </ol>
+
+    <!-- Botão de visualização completa -->
+    <div style="margin-top:10px;">
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiN2UwMmYzN2QtNjUxZi00ZTdjLWJlNjUtMWRhMTMzZjc0MjRlIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9" 
+         target="_blank" rel="noopener" 
+         style="display:inline-block;padding:8px 14px;background:#60a5fa;color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">
+         Ver página inteira ↗
+      </a>
+    </div>
+  </div>
+</article>
+<!-- PROJETO POWER BI - Curso Alura -->
+<article class="project">
+  <div class="visual">
+    <!-- Prévia do dashboard -->
+    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMmRhOWFlMWUtZjkyZi00ODA1LWJlZDAtOTVmNzMwMDI0NzNhIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9"
+      loading="lazy" allowfullscreen title="Dashboard – Projeto Alura"></iframe>
+  </div>
+
+  <div class="content">
+    <h3 style="margin:0 0 6px">Dashboard – Projeto Alura: Análise de Vendas</h3>
+    <div class="badges">
+      <span class="badge">Power BI</span>
+      <span class="badge">DAX</span>
+      <span class="badge">Power Query</span>
+      <span class="badge">Modelagem</span>
+    </div>
+
+    <p>Dashboard criado como parte do curso de Power BI da Alura, com foco em análise de vendas. O objetivo foi aplicar conceitos de modelagem de dados, ETL e medidas DAX em um cenário de negócios real, aprimorando a visualização de desempenho comercial.</p>
+
+    <ol class="steps">
+      <li>Importação e tratamento de dados com Power Query</li>
+      <li>Criação de medidas DAX para cálculo de receita, ticket médio e crescimento</li>
+      <li>Construção de painéis interativos e segmentação por categoria e período</li>
+      <li>Publicação e compartilhamento via Power BI Service</li>
+    </ol>
+
+    <!-- Botão de visualização completa -->
+    <div style="margin-top:10px;">
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiMmRhOWFlMWUtZjkyZi00ODA1LWJlZDAtOTVmNzMwMDI0NzNhIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9"
+         target="_blank" rel="noopener"
+         style="display:inline-block;padding:8px 14px;background:#60a5fa;color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">
+         Ver página inteira ↗
+      </a>
+    </div>
+  </div>
+</article>
+
+
+        <!-- PROJETO SITE (Expresso Coroado) -->
+<article class="project">
+  <div class="visual">
+    <!-- Prévia interativa do site (iframe) -->
+    <iframe src="https://eliasricardo07.github.io/Site_ExpressoCoroado/" 
+      loading="lazy" allowfullscreen title="Site – Expresso Coroado"></iframe>
+  </div>
+
+  <div class="content">
+    <h3 style="margin:0 0 6px">Site – Expresso Coroado</h3>
+    <div class="badges">
+      <span class="badge">HTML</span>
+      <span class="badge">CSS</span>
+      <span class="badge">JavaScript</span>
+      <span class="badge">GitHub Pages</span>
+    </div>
+
+    <p>Landing page institucional desenvolvida para a Expresso Coroado, apresentando identidade visual, missão, serviços e canais de contato da empresa de transporte urbano. O site foi planejado para oferecer navegação intuitiva e responsiva em todos os dispositivos.</p>
+
+    <ol class="steps">
+      <li>Criação da estrutura semântica em HTML e organização modular do CSS</li>
+      <li>Design responsivo e otimizado para dispositivos móveis</li>
+      <li>Uso de JavaScript leve para interações dinâmicas</li>
+      <li>Publicação e hospedagem via GitHub Pages</li>
+    </ol>
+
+    <!-- Botão de visualização completa -->
+    <div style="margin-top:10px;">
+      <a href="https://eliasricardo07.github.io/Site_ExpressoCoroado/" 
+         target="_blank" rel="noopener" 
+         style="display:inline-block;padding:8px 14px;background:#60a5fa;color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">
+         Ver página inteira ↗
+      </a>
+    </div>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p class="lead">Curtiu algum projeto ou quer trocar uma ideia sobre dados e BI? Fala comigo:</p>
+      <div class="actions" style="margin-top:10px">
+        <a class="btn" href="mailto:eliasricardo5005@gmail.com?subject=Contato%20%E2%80%93%20Portf%C3%B3lio&body=Ol%C3%A1%20Elias%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre...">Enviar e-mail</a>
+        <a class="btn ghost" href="https://wa.me/5592992487441" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/elias-ricardo-17b4552ba" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/eliasricardo07" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> Elias Ricardo. Todos os direitos reservados.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
