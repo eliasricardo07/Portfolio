@@ -434,3 +434,107 @@ section {
     gap: 30px !important;
   }
 }
+
+/* =============================================== */
+/* CORREÇÕES DE RESPONSIVIDADE - ADICIONAR AO FINAL */
+/* =============================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Containers responsivos */
+.container, .container-fluid, section, .section, 
+main, .main-content, .content, .wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Imagens e mídia */
+img, video, iframe, embed, object {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Textos que não quebram */
+h1, h2, h3, h4, h5, h6, p, span, a, li, td, th {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* ============ MOBILE FIRST (até 768px) ============ */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%; /* Evita zoom em iOS */
+    }
+    
+    /* Títulos responsivos */
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.3rem !important; }
+    h4 { font-size: 1.1rem !important; }
+    
+    /* Reduz padding/margin excessivo */
+    .container, .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Conteúdo em coluna única */
+    .row, .flex-row, .d-flex {
+        flex-direction: column !important;
+    }
+    
+    .col, .col-md, .col-lg {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    
+    /* Esconde alguns elementos em mobile se necessário */
+    .hide-mobile {
+        display: none !important;
+    }
+    
+    /* Botões e inputs maiores para touch */
+    button, .btn, input, textarea, select {
+        min-height: 44px !important; /* Tamanho mínimo para touch */
+    }
+}
+
+/* ============ TABLET (769px - 1024px) ============ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+    
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.7rem !important; }
+    
+    .container {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+
+/* ============ DESKTOP (acima de 1025px) ============ */
+@media (min-width: 1025px) {
+    /* Aqui você mantém os estilos desktop originais */
+    /* A menos que queira sobrepor algo específico */
+}
+
