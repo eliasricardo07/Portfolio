@@ -9,12 +9,12 @@
   <meta property="og:description" content="Analista de Dados | Power BI. Transformando dados em decisões inteligentes." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0b0b0c" />
-  <link rel="icon" href="assets/favicon.png" />
+  <link rel="icon" href="img/favicon.png" />
 
   <meta property="og:image" content="https://eliasricardo07.github.io/Portfolio/img/banner-tecnologia-preto.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="396" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="396" />
 
   <style>
     :root{
@@ -27,7 +27,6 @@
     a:hover{opacity:.92}
     img{max-width:100%;display:block}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
-
     /* NAV */
     .nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(0,0,0,.35);border-bottom:1px solid var(--border);z-index:10}
     .nav-inner{height:56px;display:flex;align-items:center;justify-content:space-between}
@@ -35,58 +34,73 @@
     .nav-links{display:flex;gap:20px;font-size:.95rem}
     .nav-links a{padding:6px 10px;border-radius:10px}
     .nav-links a:hover{background:rgba(255,255,255,.06)}
-
-    /* FOTO NA NAVBAR */
-    .nav-left{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .nav-profile{
-      width:42px;
-      height:42px;
-      border-radius:50%;
-      object-fit:cover;
-      border:2px solid var(--brand);
-      box-shadow:0 0 8px rgba(96,165,250,.4);
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-    .nav-profile:hover{
-      transform:scale(1.06);
-      box-shadow:0 0 12px rgba(96,165,250,.6);
-    }
-
     /* HERO */
     .hero{padding:48px 0 24px;border-bottom:1px solid var(--border)}
-    .hero-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:24px;align-items:center}
     .title{font-size:clamp(28px,4.2vw,44px);line-height:1.1;margin:0 0 10px}
     .subtitle{font-weight:600;color:#cdd7ff;margin:0 0 8px}
     .tagline{color:var(--muted);margin:0 0 16px}
+    .profile{justify-self:end}
+    .profile img{width:160px;height:160px;border-radius:22px;object-fit:cover;border:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.35)}
     .cta{display:flex;gap:10px}
     .btn{background:var(--brand);color:#081018;padding:10px 14px;border-radius:12px;font-weight:700}
     .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--border)}
-
     /* SECTION */
     section{padding:42px 0}
     h2{font-size:clamp(20px,3.2vw,30px);margin:0 0 16px}
     p.lead{color:#dbeafe}
     .grid{display:grid;gap:16px}
-
-    /* SOBRE */
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
-    .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{background:#0f172a;border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:.9rem;color:#e5e7eb}
-
-    /* LINGUAGENS */
-    .langbar{height:10px;background:#0f1220;border-radius:999px;overflow:hidden;border:1px solid var(--border);margin:8px 0 2px}
-    .langbar > span{display:inline-block;height:100%}
-    .lang-HTML{background:#f97316}
-    .lang-CSS{background:#8b5cf6}
-    .lang-JS{background:#facc15}
-    .langs-legend{display:flex;gap:16px;color:var(--muted);font-size:.9rem}
-    .dot{width:8px;height:8px;border-radius:999px;display:inline-block;margin-right:6px}
-
+    /* SOBRE MIM - NOVA ESTRUTURA */
+    .sobre-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .sobre-texto {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+    .sobre-texto p {
+      margin-bottom: 16px;
+      color: var(--fg);
+    }
+    /* FERRAMENTAS - NOVA SEÇÃO */
+    .ferramentas-section {
+      margin-top: 40px;
+    }
+    .ferramentas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .ferramentas-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .ferramentas-card h3 {
+      margin: 0 0 20px 0;
+      color: var(--brand);
+      font-size: 1.2rem;
+    }
+    .ferramentas-lista {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .ferramenta-tag {
+      background: rgba(96, 165, 250, 0.1);
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      color: var(--brand);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
     /* PROJETOS */
     .projects{display:grid;grid-template-columns:1fr 1fr;gap:20px}
     .project{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
@@ -97,26 +111,35 @@
     .badge{background:#0f172a;border:1px solid var(--border);color:#d1d5db;font-size:.85rem;padding:4px 8px;border-radius:999px}
     .steps{margin:10px 0 0;color:#cbd5e1}
     .steps li{margin:6px 0}
-
     /* CONTATO */
     .actions{display:flex;flex-wrap:wrap;gap:10px}
     .footer{border-top:1px solid var(--border);padding:16px 0 40px;color:var(--muted);font-size:.95rem}
 
     @media (max-width:900px){
-      .about{grid-template-columns:1fr}
+      .hero-grid{grid-template-columns:1fr}
+      .profile{justify-self:start}
+      .ferramentas-grid{grid-template-columns:1fr}
       .projects{grid-template-columns:1fr}
+      .sobre-texto {
+        padding: 20px;
+      }
+    }
+    @media (max-width:600px){
+      .ferramentas-card {
+        padding: 18px;
+      }
+      .ferramenta-tag {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
 <body>
-
   <!-- NAV -->
   <nav class="nav">
     <div class="container nav-inner">
-      <div class="nav-left">
-        <img src="./img/perfil.jpeg" alt="Foto de perfil de Elias Ricardo" class="nav-profile" />
-        <span class="brand">Elias Ricardo</span>
-      </div>
+      <div class="brand">Elias Ricardo</div>
       <div class="nav-links">
         <a href="#sobre">Sobre</a>
         <a href="#projetos">Projetos</a>
@@ -133,168 +156,597 @@
         <h1 class="title">Elias Ricardo</h1>
         <p class="tagline">Transformando dados em decisões inteligentes</p>
         <div class="cta">
-          <a class="btn" href="#projetos">Ver projetos</a>
-          <a class="btn ghost" href="#contato">Falar comigo</a>
+          <a class="btn" href="#sobre">Sobre mim</a>
+          <a class="btn ghost" href="#projetos">Ver projetos</a>
         </div>
+      </div>
+      <div class="profile">
+        <img src="./img/perfil.jpeg.jpeg" alt="Foto de perfil de Elias Ricardo"
+     style="border-radius:22px;width:160px;height:160px;object-fit:cover;border:1px solid #232327;box-shadow:0 8px 30px rgba(0,0,0,.35)" />
       </div>
     </div>
   </header>
 
-
-  <!-- SOBRE -->
-  <section id="sobre" aria-labelledby="sobre-title">
-    <div class="container">
-      <h2 id="sobre-title">Sobre mim</h2>
-      <div class="about">
-        <div class="card">
-          <p class="lead">Sou Analista de Dados focado em Power BI e automação de processos. Tenho experiência em montar dashboards limpos e objetivos, conectando diferentes fontes de dados e documentando o passo a passo do projeto para facilitar a manutenção e a tomada de decisão.</p>
-          <h3>Ferramentas que domino</h3>
-          <div class="chips" aria-hidden="false">
-            <span class="chip">Power BI (DAX)</span>
-            <span class="chip">Power Query</span>
-            <span class="chip">Excel Avançado</span>
-            <span class="chip">SQL básico</span>
-            <span class="chip">GitHub & GitHub Pages</span>
-            <span class="chip">HTML & CSS</span>
-            <span class="chip">Google Colab</span>
+  <!-- SOBRE MIM - NOVA SEÇÃO -->
+  <section id="sobre">
+    <div class="container sobre-container">
+      <h2>Sobre mim</h2>
+      <div class="sobre-texto">
+        <p style="text-align: justify;">Prazer, me chamo Elias. Sou Analista de Dados especializado em Power BI, com foco em traduzir dados operacionais complexos em decisões claras para gestores.</p>
+        <p style="text-align: justify;">Atualmente na Expresso Coroado, trabalho diretamente com a equipe de operações desenvolvendo sistemas de painéis que otimizaram o acompanhamento de desempenho de frota e motoristas e demais setores, assim reduzindo possíveis sinistros e prevendo tendências futuras. Também tive participação ativa no crescimento do marketing e presença digital da empresa, com crescimento de 65% desde minha chegada.</p>
+        <p style="text-align: justify;">Acredito que meu diferencial é um reflexo dos meus resultados. Enquanto muitos se perdem em gráficos bonitos, eu me conecto aos valores da empresa, procuro me posicionar como o dono do negócio, sempre questionando: "O que esse gráfico quer dizer?", "O que preciso responder?", "Isso faz sentido?", "Quem olhar para isso vai entender?". Além disso, gosto de criar conexões e ter bom relacionamento com meus colegas de trabalho, visando uma convivência melhor.</p>
+      </div>
+      
+      <!-- FERRAMENTAS - NOVA SEÇÃO -->
+      <div class="ferramentas-section">
+        <div class="ferramentas-grid">
+          <div class="ferramentas-card">
+            <h3>🛠️ Ferramentas que domino</h3>
+            <div class="ferramentas-lista">
+              <span class="ferramenta-tag">Power BI (DAX)</span>
+              <span class="ferramenta-tag">Power Query</span>
+              <span class="ferramenta-tag">Excel Avançado</span>
+              <span class="ferramenta-tag">SQL básico</span>
+              <span class="ferramenta-tag">GitHub & GitHub Pages</span>
+              <span class="ferramenta-tag">HTML & CSS</span>
+              <span class="ferramenta-tag">Google Colab</span>
+            </div>
           </div>
-          <h3 style="margin-top:12px">Aprendendo</h3>
-          <div class="chips">
-            <span class="chip">Python para Análise de Dados</span>
-            <span class="chip">Banco de Dados</span>
-            <span class="chip">SQLite (consultas)</span>
-            <span class="chip">Git</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-top:0">Barras de Linguagens (por projeto)</h3>
-          <p style="color:var(--muted);margin-top:6px">Estas barras aparecem apenas nos <strong>projetos que envolveram programação</strong>. </p>Exemplo do site Expresso Coroado:</p>
-          <!-- Barra Expresso Coroado -->
-          <div class="langbar" aria-label="Stack do projeto Expresso Coroado">
-            <span class="lang-HTML" style="width:48.9%"></span>
-            <span class="lang-CSS" style="width:45%"></span>
-            <span class="lang-JS" style="width:6.1%"></span>
-          </div>
-          <div class="langs-legend" aria-hidden="true">
-            <span><span class="dot lang-HTML"></span>HTML 48,9%</span>
-            <span><span class="dot lang-CSS"></span>CSS 45%</span>
-            <span><span class="dot lang-JS"></span>JS 6,1%</span>
-          </div>
-
-          <!-- Barra Portfólio -->
-          <p style="color:var(--muted);margin-top:12px">Exemplo do site Portfólio:</p>
-          <div class="langbar" aria-label="Stack do projeto Portfólio">
-            <span class="lang-HTML" style="width:50%"></span>
-            <span class="lang-CSS" style="width:35%"></span>
-            <span class="lang-JS" style="width:15%"></span>
-          </div>
-          <div class="langs-legend" aria-hidden="true">
-            <span><span class="dot lang-HTML"></span>HTML 50%</span>
-            <span><span class="dot lang-CSS"></span>CSS 35%</span>
-            <span><span class="dot lang-JS"></span>JS 15%</span>
+          
+          <div class="ferramentas-card">
+            <h3>📚 Aprendendo</h3>
+            <div class="ferramentas-lista">
+              <span class="ferramenta-tag">Python para Análise de Dados</span>
+              <span class="ferramenta-tag">Banco de Dados</span>
+              <span class="ferramenta-tag">SQLite (consultas)</span>
+              <span class="ferramenta-tag">Git</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== NOVA SEÇÃO: SERVIÇOS ========== -->
+<section id="servicos" style="padding: 60px 0;">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 10px;">Serviços que Ofereço</h2>
+    <p style="text-align: center; color: var(--muted); max-width: 600px; margin: 0 auto 50px;">
+      Soluções personalizadas em análise de dados e desenvolvimento web para alavancar seu negócio
+    </p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+      
+      <!-- SERVIÇO 1: Power BI -->
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; height: 100%;">
+        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(59, 130, 246, 0.3)); border-radius: 12px; display: grid; place-items: center; margin-bottom: 20px; font-size: 1.8rem;">
+          📊
+        </div>
+        <h3 style="margin: 0 0 15px 0; font-size: 1.3rem;">Dashboards no Power BI</h3>
+        <ul style="color: var(--muted); padding-left: 20px; margin: 0 0 25px 0; line-height: 1.6;">
+          <li style="margin-bottom: 8px;">Análise de dados operacionais e financeiros</li>
+          <li style="margin-bottom: 8px;">KPIs personalizados para seu negócio</li>
+          <li style="margin-bottom: 8px;">Automação de relatórios mensais</li>
+          <li style="margin-bottom: 8px;">Integração com múltiplas fontes de dados</li>
+        </ul>
+        <a href="https://wa.me/5592992487441?text=Olá Elias! Vim pelo seu portfólio. *Preciso de um Dashboard no Power BI* para analisar meus dados. Podemos conversar sobre orçamento?" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   style="display: inline-block; padding: 10px 20px; background: rgba(96, 165, 250, 0.1); border: 1px solid var(--brand); color: var(--brand); border-radius: 8px; text-align: center; width: 100%; text-decoration: none; transition: all 0.3s ease;">
+   📊 Solicitar Orçamento
+</a>
+      </div>
+      
+      <!-- SERVIÇO 2: Sites -->
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; height: 100%;">
+        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.3)); border-radius: 12px; display: grid; place-items: center; margin-bottom: 20px; font-size: 1.8rem;">
+          🌐
+        </div>
+        <h3 style="margin: 0 0 15px 0; font-size: 1.3rem;">Sites Institucionais</h3>
+        <ul style="color: var(--muted); padding-left: 20px; margin: 0 0 25px 0; line-height: 1.6;">
+          <li style="margin-bottom: 8px;">Landing pages profissionais e modernas</li>
+          <li style="margin-bottom: 8px;">Design 100% responsivo (mobile-first)</li>
+          <li style="margin-bottom: 8px;">Otimização para mecanismos de busca</li>
+          <li style="margin-bottom: 8px;">Hospedagem e suporte técnico</li>
+        </ul>
+        <a href="https://wa.me/5592992487441?text=Olá Elias! Amei os sites do seu portfólio. *Preciso de um Site Institucional* para minha empresa. Podemos discutir prazos e valores?" 
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display: inline-block; padding: 10px 20px; background: rgba(139, 92, 246, 0.1); border: 1px solid #8b5cf6; color: #8b5cf6; border-radius: 8px; text-align: center; width: 100%; text-decoration: none; transition: all 0.3s ease;">
+   🌐 Solicitar Orçamento
+</a>
+      </div>
+      
+      <!-- SERVIÇO 3: Consultoria -->
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; height: 100%;">
+        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.3)); border-radius: 12px; display: grid; place-items: center; margin-bottom: 20px; font-size: 1.8rem;">
+          🔍
+        </div>
+        <h3 style="margin: 0 0 15px 0; font-size: 1.3rem;">Consultoria em Dados</h3>
+        <ul style="color: var(--muted); padding-left: 20px; margin: 0 0 25px 0; line-height: 1.6;">
+          <li style="margin-bottom: 8px;">Diagnóstico de maturidade analítica</li>
+          <li style="margin-bottom: 8px;">Estruturação de processos de dados</li>
+          <li style="margin-bottom: 8px;">Definição de métricas e indicadores</li>
+          <li style="margin-bottom: 8px;">Mentoria para equipes de análise</li>
+        </ul>
+        <a href="https://wa.me/5592992487441?text=Olá Elias! Estou com dificuldades na análise de dados da minha empresa. *Preciso de uma Consultoria* para estruturar nossos processos. Tem disponibilidade?" 
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display: inline-block; padding: 10px 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; color: #10b981; border-radius: 8px; text-align: center; width: 100%; text-decoration: none; transition: all 0.3s ease;">
+   🔍 Solicitar Consultoria
+</a>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- PROJETOS -->
-  <section id="projetos" aria-labelledby="projetos-title">
+  <section id="projetos">
     <div class="container">
-      <h2 id="projetos-title">Projetos</h2>
+      <h2>Projetos</h2>
 
       <div class="projects">
         <!-- PROJETO POWER BI - Expresso Coroado -->
-        <article class="project" aria-labelledby="proj-ec-title">
-          <div class="visual" aria-hidden="false">
-            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiN2UwMmYzN2QtNjUxZi00ZTdjLWJlNjUtMWRhMTMzZjc0MjRlIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9"
-                    loading="lazy" allowfullscreen title="Dashboard – Expresso Coroado"></iframe>
-          </div>
-          <div class="content">
-            <h3 id="proj-ec-title" style="margin:0 0 6px">Dashboard – Análise Operacional de Frotas</h3>
-            <div class="badges"><span class="badge">Power BI</span><span class="badge">DAX</span><span class="badge">ETL</span></div>
-            <p>Dashboard desenvolvido para acompanhamento de KPIs operacionais da Expresso Coroado, com foco em custos, produtividade e desempenho. Permite filtros por período e tipo de movimento, auxiliando na tomada de decisão rápida e precisa.</p>
-            <ol class="steps">
-              <li>Modelagem e preparação de dados (ETL básico em Power BI Desktop)</li>
-              <li>Criação de medidas DAX para indicadores e métricas</li>
-              <li>Estrutura de relatórios segmentados por área (Financeiro, Operações e Logística)</li>
-              <li>Publicação e integração com equipe gestora</li>
-            </ol>
-            <div style="margin-top:10px;">
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiN2UwMmYzN2QtNjUxZi00ZTdjLWJlNjUtMWRhMTMzZjc0MjRlIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9"
-                 target="_blank" rel="noopener" style="display:inline-block;padding:8px 14px;background:var(--brand);color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">Ver página inteira ↗</a>
-            </div>
-          </div>
-        </article>
+<article class="project">
+  <div class="visual">
+    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiN2UwMmYzN2QtNjUxZi00ZTdjLWJlNjUtMWRhMTMzZjc0MjRlIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9" 
+      loading="lazy" allowfullscreen title="Dashboard – Expresso Coroado"></iframe>
+  </div>
 
-        <!-- PROJETO POWER BI - Curso Alura -->
-        <article class="project" aria-labelledby="proj-alura-title">
-          <div class="visual" aria-hidden="false">
-            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMmRhOWFlMWUtZjkyZi00ODA1LWJlZDAtOTVmNzMwMDI0NzNhIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9"
-                    loading="lazy" allowfullscreen title="Dashboard – Projeto Alura"></iframe>
-          </div>
-          <div class="content">
-            <h3 id="proj-alura-title" style="margin:0 0 6px">Dashboard – Projeto Alura: Análise de Vendas</h3>
-            <div class="badges"><span class="badge">Power BI</span><span class="badge">DAX</span><span class="badge">Power Query</span><span class="badge">Modelagem</span></div>
-            <p>Dashboard criado como parte do curso de Power BI da Alura, com foco em análise de vendas. O objetivo foi aplicar conceitos de modelagem de dados, ETL e medidas DAX em um cenário de negócios real, aprimorando a visualização de desempenho comercial.</p>
-            <ol class="steps">
-              <li>Importação e tratamento de dados com Power Query</li>
-              <li>Criação de medidas DAX para cálculo de receita, ticket médio e crescimento</li>
-              <li>Construção de painéis interativos e segmentação por categoria e período</li>
-              <li>Publicação e compartilhamento via Power BI Service</li>
-            </ol>
-            <div style="margin-top:10px;">
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiMmRhOWFlMWUtZjkyZi00ODA1LWJlZDAtOTVmNzMwMDI0NzNhIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9"
-                 target="_blank" rel="noopener" style="display:inline-block;padding:8px 14px;background:var(--brand);color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">Ver página inteira ↗</a>
-            </div>
-          </div>
-        </article>
+  <div class="content">
+    <h3 style="margin:0 0 6px">Dashboard – Análise Operacional de Frotas</h3>
+    <div class="badges">
+      <span class="badge">Power BI</span>
+      <span class="badge">DAX</span>
+      <span class="badge">ETL</span>
+    </div>
+
+    <p style="text-align: justify; text-justify: inter-word; letter-spacing: -0.04em;">Dashboard desenvolvido para acompanhamento de KPIs operacionais da Expresso Coroado, com foco em custos, produtividade e desempenho. Permite filtros por período e tipo de movimento, auxiliando na tomada de decisão rápida e precisa.</p>
+
+    <ol class="steps">
+      <li>Modelagem e preparação de dados (ETL básico em Power BI Desktop)</li>
+      <li>Criação de medidas DAX para indicadores e métricas</li>
+      <li>Estrutura de relatórios segmentados por área (Financeiro, Operações e Logística)</li>
+      <li>Publicação e integração com equipe gestora</li>
+    </ol>
+
+    <!-- Botão de visualização completa -->
+    <div style="margin-top:10px;">
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiN2UwMmYzN2QtNjUxZi00ZTdjLWJlNjUtMWRhMTNzZjc0MjRlIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9" 
+         target="_blank" rel="noopener" 
+         style="display:inline-block;padding:8px 14px;background:#60a5fa;color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">
+         Ver página inteira ↗
+      </a>
+    </div>
+  </div>
+</article>
+<!-- PROJETO POWER BI - Curso Alura -->
+<article class="project">
+  <div class="visual">
+    <!-- Prévia do dashboard -->
+    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMmRhOWFlMWUtZjkyZi00ODA1LWJlZDAtOTVmNzMwMDI0NzNhIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9"
+      loading="lazy" allowfullscreen title="Dashboard – Projeto Alura"></iframe>
+  </div>
+
+  <div class="content">
+    <h3 style="margin:0 0 6px">Dashboard – Projeto Alura: Análise de Vendas</h3>
+    <div class="badges">
+      <span class="badge">Power BI</span>
+      <span class="badge">DAX</span>
+      <span class="badge">Power Query</span>
+      <span class="badge">Modelagem</span>
+    </div>
+
+    <p style="text-align: justify; text-justify: inter-word; ">Dashboard criado como parte do curso de Power BI da Alura, com foco em análise de vendas. O objetivo foi aplicar conceitos de modelagem de dados, ETL e medidas DAX em um cenário de negócios real, aprimorando a visualização de desempenho comercial.</p>
+
+    <ol class="steps">
+      <li>Importação e tratamento de dados com Power Query</li>
+      <li>Criação de medidas DAX para cálculo de receita, ticket médio e crescimento</li>
+      <li>Construção de painéis interativos e segmentação por categoria e período</li>
+      <li>Publicação e compartilhamento via Power BI Service</li>
+    </ol>
+
+    <!-- Botão de visualização completa -->
+    <div style="margin-top:10px;">
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiMmRhOWFlMWUtZjkyZi00ODA1LWJlZDAtOTVmNzMwMDI0NzNhIiwidCI6IjgzMGVjNGJhLWUzNTYtNDM2Zi05NGQzLWU3NGQ1OGU1OTE4OSJ9"
+         target="_blank" rel="noopener"
+         style="display:inline-block;padding:8px 14px;background:#60a5fa;color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">
+         Ver página inteira ↗
+      </a>
+    </div>
+  </div>
+</article>
+
 
         <!-- PROJETO SITE (Expresso Coroado) -->
-        <article class="project" aria-labelledby="proj-site-title">
-          <div class="visual" aria-hidden="false">
-            <iframe src="https://eliasricardo07.github.io/Site_ExpressoCoroado/" loading="lazy" allowfullscreen title="Site – Expresso Coroado"></iframe>
-          </div>
-          <div class="content">
-            <h3 id="proj-site-title" style="margin:0 0 6px">Site – Expresso Coroado</h3>
-            <div class="badges"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">GitHub Pages</span></div>
-            <p>Landing page institucional desenvolvida para a Expresso Coroado, apresentando identidade visual, missão, serviços e canais de contato da empresa de transporte urbano. O site foi planejado para oferecer navegação intuitiva e responsiva em todos os dispositivos.</p>
-            <ol class="steps">
-              <li>Criação da estrutura semântica em HTML e organização modular do CSS</li>
-              <li>Design responsivo e otimizado para dispositivos móveis</li>
-              <li>Uso de JavaScript leve para interações dinâmicas</li>
-              <li>Publicação e hospedagem via GitHub Pages</li>
-            </ol>
-            <div style="margin-top:10px;">
-              <a href="https://eliasricardo07.github.io/Site_ExpressoCoroado/" target="_blank" rel="noopener" style="display:inline-block;padding:8px 14px;background:var(--brand);color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">Ver página inteira ↗</a>
-            </div>
-          </div>
-        </article>
+<article class="project">
+  <div class="visual">
+    <!-- Prévia interativa do site (iframe) -->
+    <iframe src="https://expressocoroado.com.br/" 
+      loading="lazy" allowfullscreen title="Site – Expresso Coroado"></iframe>
+  </div>
+
+  <div class="content">
+    <h3 style="margin:0 0 6px">Site – Expresso Coroado</h3>
+    <div class="badges">
+      <span class="badge">HTML</span>
+      <span class="badge">CSS</span>
+      <span class="badge">JavaScript</span>
+      <span class="badge">PHP</span>
+      <span class="badge">Filezilla</span>
+    </div>
+
+    <p style="text-align: justify; text-justify: inter-word;">Landing page institucional desenvolvida para a Expresso Coroado, apresentando identidade visual, missão, serviços e canais de contato da empresa de transporte urbano. O site foi planejado para oferecer navegação intuitiva e responsiva em todos os dispositivos.</p>
+
+    <ol class="steps">
+      <li>Criação da estrutura semântica em HTML e organização modular do CSS</li>
+      <li>Design responsivo e otimizado para dispositivos móveis</li>
+      <li>PHP na seção de currículos</li>
+      <li>Uso de JavaScript leve para interações dinâmicas</li>
+      <li>Publicação e hospedagem via servidor Filezilla</li>
+    </ol>
+
+    <!-- Botão de visualização completa -->
+    <div style="margin-top:10px;">
+      <a href="https://eliasricardo07.github.io/Site_ExpressoCoroado/" 
+         target="_blank" rel="noopener" 
+         style="display:inline-block;padding:8px 14px;background:#60a5fa;color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">
+         Ver página inteira ↗
+      </a>
+    </div>
+  </div>
+</article>
+
+        <!-- PROJETO SITE GARÇA REAL -->
+<article class="project">
+  <div class="visual">
+    <iframe 
+      src="https://garcareal.com.br/" 
+      loading="lazy" 
+      allowfullscreen 
+      title="Site Institucional – Garça Real"
+    ></iframe>
+  </div>
+
+  <div class="content">
+    <h3 style="margin:0 0 6px">Site Institucional – Garça Real</h3>
+    <div class="badges">
+      <span class="badge">HTML</span>
+      <span class="badge">CSS</span>
+      <span class="badge">JavaScript</span>
+      <span class="badge">Design Responsivo</span>
+      <span class="badge">Filezilla</span>
+    </div>
+
+    <p style="text-align: justify; text-justify: inter-word; letter-spacing: -0.03em;">Site institucional desenvolvido para a Garça Real, apresentando os serviços, histórico e valores da empresa de forma moderna e profissional. O design foi pensado para transmitir confiança e credibilidade, com navegação intuitiva e totalmente adaptada para dispositivos móveis.</p>
+
+    <ol class="steps">
+      <li>Desenvolvimento da estrutura semântica em HTML5</li>
+      <li>Estilização avançada com CSS3 (Flexbox/Grid)</li>
+      <li>PHP na seção de currículos</li>
+      <li>Implementação de interatividade com JavaScript</li>
+      <li>Otimização para performance e SEO</li>
+      <li>Publicação e hospedagem via servidor Filezilla</li>
+    </ol>
+
+    <!-- Botão de visualização completa -->
+    <div style="margin-top:10px;">
+      <a href="https://garcareal.com.br/" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         style="display:inline-block;padding:8px 14px;background:#60a5fa;color:#0b0b0c;font-weight:600;border-radius:8px;text-decoration:none;">
+         Visitar Site ↗
+      </a>
+    </div>
+  </div>
+</article>
+
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
-  <section id="contato" aria-labelledby="contato-title">
-    <div class="container">
-      <h2 id="contato-title">Contato</h2>
-      <p class="lead">Curtiu algum projeto ou quer trocar uma ideia sobre dados e BI? Fala comigo:</p>
-      <div class="actions" style="margin-top:10px">
-        <a class="btn" href="mailto:eliasricardo5005@gmail.com?subject=Contato%20%E2%80%93%20Portf%C3%B3lio&body=Ol%C3%A1%20Elias%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre...">Enviar e-mail</a>
-        <a class="btn ghost" href="https://wa.me/5592992487441" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/elias-ricardo-17b4552ba" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn ghost" href="https://github.com/eliasricardo07" target="_blank" rel="noopener">GitHub</a>
+  <!-- ========== NOVA SEÇÃO: RESULTADOS ========== -->
+<section style="padding: 60px 0; background: rgba(96, 165, 250, 0.05); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 10px;">Resultados e Impacto</h2>
+    <p style="text-align: center; color: var(--muted); max-width: 600px; margin: 0 auto 50px;">
+      Veja os benefícios concretos que minhas soluções já proporcionaram
+    </p>
+    
+    <!-- GRID DE 2 COLUNAS (2x2) -->
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 50px;">
+      
+      <!-- LINHA 1: COLUNA 1 -->
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; text-align: center;">
+        <div style="font-size: 3rem; font-weight: 800; color: var(--brand); margin-bottom: 15px; line-height: 1;">40%</div>
+        <div style="font-weight: 600; margin-bottom: 12px; font-size: 1.2rem;">Redução de Eventos de Risco</div>
+        <div style="color: var(--muted); font-size: 1rem; line-height: 1.6;">
+          Diminuição em multas, sinistros e infrações através de monitoramento proativo de motoristas
+        </div>
+      </div>
+      
+      <!-- LINHA 1: COLUNA 2 -->
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; text-align: center;">
+        <div style="font-size: 3rem; font-weight: 800; color: #10b981; margin-bottom: 15px; line-height: 1;">65%</div>
+        <div style="font-weight: 600; margin-bottom: 12px; font-size: 1.2rem;">Crescimento Digital</div>
+        <div style="color: var(--muted); font-size: 1rem; line-height: 1.6;">
+          Aumento de 2.400 para 4.000 seguidores nas redes sociais da empresa
+        </div>
+      </div>
+      
+      <!-- LINHA 2: COLUNA 1 -->
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; text-align: center;">
+        <div style="font-size: 3rem; font-weight: 800; color: #8b5cf6; margin-bottom: 15px; line-height: 1;">15%</div>
+        <div style="font-weight: 600; margin-bottom: 12px; font-size: 1.2rem;">Otimização de Frota</div>
+        <div style="color: var(--muted); font-size: 1rem; line-height: 1.6;">
+          Identificação dos 15% dos veículos com menor retorno para realocação estratégica
+        </div>
+      </div>
+      
+      <!-- LINHA 2: COLUNA 2 -->
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; text-align: center;">
+        <div style="font-size: 3rem; font-weight: 800; color: #f59e0b; margin-bottom: 15px; line-height: 1;">12%</div>
+        <div style="font-weight: 600; margin-bottom: 12px; font-size: 1.2rem;">Economia em Combustível</div>
+        <div style="color: var(--muted); font-size: 1rem; line-height: 1.6;">
+          Projeção de economia na seleção de motores mais eficientes (km/L diesel)
+        </div>
       </div>
     </div>
-  </section>
+    
+    <!-- RESPONSIVO: 1 coluna no mobile -->
+    <style>
+      @media (max-width: 768px) {
+        #resultados-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
+    
+    <!-- ========== DEPOIMENTOS (2 COLUNAS) ========== -->
+<div style="max-width: 1100px; margin: 50px auto 0;">
+  <h3 style="text-align: center; margin-bottom: 30px; color: var(--fg);">O Que Dizem Sobre Meu Trabalho</h3>
+  
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
+    
+    <!-- DEPOIMENTO 1 -->
+    <div style="background: var(--card); border-radius: 16px; padding: 25px; border: 1px solid var(--border); height: 100%;">
+      <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px;">
+        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--brand), #3b82f6); border-radius: 50%; display: grid; place-items: center; font-weight: bold; color: white; flex-shrink: 0;">
+          EC
+        </div>
+        <div>
+          <div style="font-weight: 600; margin-bottom: 5px;">Gestor Operacional</div>
+          <div style="color: var(--muted); font-size: 0.9rem;">Expresso Coroado</div>
+        </div>
+      </div>
+      <p style="font-style: italic; color: #e5e7eb; line-height: 1.6; margin: 0;">
+        "Os dashboards desenvolvidos pelo Elias transformaram nossa tomada de decisão. Em menos de um mês já identificamos oportunidades que estavam passando despercebidas."
+      </p>
+    </div>
+    
+    <!-- DEPOIMENTO 2 -->
+    <div style="background: var(--card); border-radius: 16px; padding: 25px; border: 1px solid var(--border); height: 100%;">
+      <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px;">
+        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; display: grid; place-items: center; font-weight: bold; color: white; flex-shrink: 0;">
+          GR
+        </div>
+        <div>
+          <div style="font-weight: 600; margin-bottom: 5px;">Supervisor de Operações</div>
+          <div style="color: var(--muted); font-size: 0.9rem;">Garça Real</div>
+        </div>
+      </div>
+      <p style="font-style: italic; color: #e5e7eb; line-height: 1.6; margin: 0;">
+        "O site desenvolvido superou nossas expectativas. Moderno, rápido e totalmente responsivo. O Elias entendeu exatamente o que nossa empresa precisava transmitir."
+      </p>
+    </div>
+    
+  </div>
+  
+  <!-- RESPONSIVO: 1 coluna no mobile -->
+  <style>
+    @media (max-width: 768px) {
+      .depoimentos-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+    }
+  </style>
+</div>
+
+ <!-- ========== SEÇÃO CONTATO (HÍBRIDO) ========== -->
+<section id="contato" style="padding: 60px 0; background: rgba(18, 18, 21, 0.7);">
+  <div class="container">
+    <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+      <h2>Vamos Transformar Seus Dados em Resultados?</h2>
+      <p style="color: var(--muted); font-size: 1.1rem; line-height: 1.6;">
+        Para projetos rápidos, use os botões da seção Serviços. Para projetos mais complexos, preencha o formulário abaixo.
+        Respondo em até <strong style="color: var(--brand);">24 horas úteis</strong>.
+      </p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;" id="contato-grid">
+      
+      <!-- COLUNA 1: FORMULÁRIO COMPLETO -->
+      <div style="background: var(--card); border-radius: 16px; padding: 30px; border: 1px solid var(--border);">
+        <h3 style="margin: 0 0 25px 0; color: var(--fg);">Formulário Detalhado</h3>
+        
+        <form id="form-orcamento-detalhado" style="display: grid; gap: 20px;">
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--muted);">Nome Completo *</label>
+            <input type="text" id="nome-completo" required 
+                   style="width: 100%; padding: 12px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border); border-radius: 8px; color: var(--fg); font-size: 1rem;">
+          </div>
+          
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--muted);">E-mail para Contato *</label>
+            <input type="email" id="email-contato" required 
+                   style="width: 100%; padding: 12px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border); border-radius: 8px; color: var(--fg); font-size: 1rem;">
+          </div>
+          
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--muted);">Serviço Principal *</label>
+            <select id="servico-principal" required 
+                    style="width: 100%; padding: 12px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border); border-radius: 8px; color: var(--fg); font-size: 1rem;">
+              <option value="">Selecione o serviço desejado...</option>
+              <option value="dashboard-powerbi">Dashboard no Power BI</option>
+              <option value="site-institucional">Site Institucional</option>
+              <option value="consultoria-dados">Consultoria em Dados</option>
+              <option value="manutencao-dashboard">Manutenção de Dashboard Existente</option>
+              <option value="integracao-dados">Integração de Fontes de Dados</option>
+              <option value="outro">Outro (descreva abaixo)</option>
+            </select>
+          </div>
+          
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--muted);">Orçamento Previsto</label>
+            <select id="faixa-orcamento" 
+                    style="width: 100%; padding: 12px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border); border-radius: 8px; color: var(--fg); font-size: 1rem;">
+              <option value="">Selecione uma faixa de investimento</option>
+              <option value="ate-1000">Até R$ 1.000</option>
+              <option value="1000-3000">R$ 1.000 - R$ 3.000</option>
+              <option value="3000-5000">R$ 3.000 - R$ 5.000</option>
+              <option value="acima-5000">Acima de R$ 5.000</option>
+              <option value="a-definir">A definir após conversa</option>
+            </select>
+          </div>
+          
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--muted);">Descreva seu Projeto *</label>
+            <textarea id="descricao-projeto" required rows="5" 
+                      style="width: 100%; padding: 12px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border); border-radius: 8px; color: var(--fg); font-size: 1rem; resize: vertical;"
+                      placeholder="Exemplo: Preciso de um dashboard para acompanhar vendas mensais de 3 lojas, com dados que vêm do Excel..."></textarea>
+          </div>
+          
+          <button type="button" onclick="enviarFormularioWhatsApp()" 
+                  style="width: 100%; padding: 14px; background: linear-gradient(135deg, var(--brand), #3b82f6); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: transform 0.2s;">
+            📩 Enviar Proposta Detalhada
+          </button>
+        </form>
+      </div>
+      
+      <!-- COLUNA 2: INFORMAÇÕES E CONTATOS ALTERNATIVOS -->
+      <div>
+        <!-- CARD DE CONTATO DIRETO -->
+        <div style="background: var(--card); border-radius: 16px; padding: 30px; border: 1px solid var(--border); margin-bottom: 25px;">
+          <h3 style="margin: 0 0 20px 0; color: var(--fg);">Contato Direto</h3>
+          
+          <div style="display: grid; gap: 15px;">
+            <a href="mailto:eliasricardo5005@gmail.com?subject=Orçamento via Portfólio" 
+               style="display: flex; align-items: center; gap: 12px; padding: 15px; background: rgba(96, 165, 250, 0.08); border-radius: 10px; text-decoration: none; color: var(--fg); border: 1px solid rgba(96, 165, 250, 0.2); transition: all 0.3s;">
+              <span style="font-size: 1.2rem;">📧</span>
+              <div>
+                <div style="font-weight: 600;">E-mail</div>
+                <div style="color: var(--muted); font-size: 0.95rem;">eliasricardo5005@gmail.com</div>
+              </div>
+            </a>
+            
+            <a href="https://wa.me/5592992487441?text=Olá Elias! Gostaria de conversar sobre um projeto." 
+               target="_blank" rel="noopener noreferrer"
+               style="display: flex; align-items: center; gap: 12px; padding: 15px; background: rgba(16, 185, 129, 0.08); border-radius: 10px; text-decoration: none; color: var(--fg); border: 1px solid rgba(16, 185, 129, 0.2); transition: all 0.3s;">
+              <span style="font-size: 1.2rem;">💬</span>
+              <div>
+                <div style="font-weight: 600;">WhatsApp</div>
+                <div style="color: var(--muted); font-size: 0.95rem;">(92) 99248-7441</div>
+              </div>
+            </a>
+            
+            <div style="padding: 15px; background: rgba(245, 158, 11, 0.08); border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.2);">
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                <span style="font-size: 1.2rem;">⏰</span>
+                <div style="font-weight: 600;">Horário de Atendimento</div>
+              </div>
+              <div style="color: var(--muted); font-size: 0.95rem;">
+                Segunda a Sexta: 9h às 18h<br>
+                Sábado: 9h às 12h (apenas WhatsApp)
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CARD DE GARANTIA -->
+        <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 16px; padding: 25px;">
+          <div style="font-weight: 600; color: #10b981; margin-bottom: 15px; font-size: 1.1rem;">✅ Garantia de Qualidade</div>
+          <div style="color: var(--muted); font-size: 0.95rem; line-height: 1.6;">
+            • <strong>1ª reunião gratuita</strong> para alinhamento<br>
+            • <strong>Proposta detalhada</strong> sem compromisso<br>
+            • <strong>Pagamento em etapas</strong> (30% + 40% + 30%)<br>
+            • <strong>Suporte pós-entrega</strong> por 30 dias<br>
+            • <strong>Revisões inclusas</strong> até sua aprovação
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CSS PARA RESPONSIVIDADE -->
+  <style>
+    @media (max-width: 768px) {
+      #contato-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+    }
+  </style>
+</section>
+
+<!-- JAVASCRIPT PARA O FORMULÁRIO -->
+<script>
+function enviarFormularioWhatsApp() {
+  // Coletar dados do formulário
+  const nome = document.getElementById('nome-completo').value.trim();
+  const email = document.getElementById('email-contato').value.trim();
+  const servico = document.getElementById('servico-principal').value;
+  const orcamento = document.getElementById('faixa-orcamento').value;
+  const descricao = document.getElementById('descricao-projeto').value.trim();
+  
+  // Validação básica
+  if (!nome || !email || !servico || !descricao) {
+    alert('Por favor, preencha pelo menos os campos obrigatórios: Nome, E-mail, Serviço e Descrição do projeto.');
+    return;
+  }
+  
+  // Mapear valores para textos mais amigáveis
+  const servicoText = {
+    'dashboard-powerbi': 'Dashboard no Power BI',
+    'site-institucional': 'Site Institucional',
+    'consultoria-dados': 'Consultoria em Dados',
+    'manutencao-dashboard': 'Manutenção de Dashboard Existente',
+    'integracao-dados': 'Integração de Fontes de Dados',
+    'outro': 'Outro serviço'
+  }[servico] || servico;
+  
+  const orcamentoText = {
+    'ate-1000': 'Até R$ 1.000',
+    '1000-3000': 'R$ 1.000 - R$ 3.000',
+    '3000-5000': 'R$ 3.000 - R$ 5.000',
+    'acima-5000': 'Acima de R$ 5.000',
+    'a-definir': 'A definir após conversa',
+    '': 'Não informado'
+  }[orcamento] || orcamento;
+  
+  // Construir a mensagem para WhatsApp (JÁ COM %0A para quebras de linha)
+  const mensagem = `*NOVA SOLICITAÇÃO DE ORÇAMENTO*%0A%0A` +
+                   `*Nome:* ${nome}%0A` +
+                   `*E-mail:* ${email}%0A` +
+                   `*Serviço Desejado:* ${servicoText}%0A` +
+                   `*Faixa de Investimento:* ${orcamentoText}%0A%0A` +
+                   `*Descrição do Projeto:*%0A${descricao}%0A%0A` +
+                   `_Formulário enviado via portfólio online_`;
+  
+  // REMOVA O encodeURIComponent() - a mensagem JÁ tem %0A codificado
+  window.open(`https://wa.me/5592992487441?text=${mensagem}`, '_blank');
+  
+  // Feedback para o usuário
+  alert('Aguarde enquanto abrimos o WhatsApp... Complete a mensagem com qualquer detalhe adicional!');
+}
+</script>
+
 
   <footer class="footer">
     <div class="container">© <span id="y"></span> Elias Ricardo. Todos os direitos reservados.</div>
   </footer>
 
   <script>
-    // Atualiza o ano automaticamente
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
