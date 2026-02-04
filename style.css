@@ -435,106 +435,121 @@ section {
   }
 }
 
-/* =============================================== */
-/* CORREÇÕES DE RESPONSIVIDADE - ADICIONAR AO FINAL */
-/* =============================================== */
+/* ====== (do seu HTML) sobre + ferramentas (mantém design igual) ====== */
+.sobre-container { max-width: 800px; margin: 0 auto; }
+.sobre-texto {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.sobre-texto p { margin-bottom: 16px; color: var(--fg); }
 
-* {
-    box-sizing: border-box;
+.ferramentas-section { margin-top: 40px; }
+.ferramentas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.ferramentas-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+}
+.ferramentas-card h3 { margin: 0 0 20px 0; color: var(--brand); font-size: 1.2rem; }
+.ferramentas-lista { display: flex; flex-wrap: wrap; gap: 10px; }
+.ferramenta-tag {
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  color: var(--brand);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-html {
-    overflow-x: hidden;
-    max-width: 100vw;
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .profile { justify-self: start; }
+  .ferramentas-grid { grid-template-columns: 1fr; }
+  .projects { grid-template-columns: 1fr; }
+  .sobre-texto { padding: 20px; }
+}
+@media (max-width: 600px) {
+  .ferramentas-card { padding: 18px; }
+  .ferramenta-tag { padding: 6px 12px; font-size: 0.85rem; }
+}
+.btn-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-body {
-    width: 100%;
-    overflow-x: hidden;
-    position: relative;
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
-/* Containers responsivos */
-.container, .container-fluid, section, .section, 
-main, .main-content, .content, .wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
+.btn-gradient .icon {
+  font-size: 1.1rem;
 }
 
-/* Imagens e mídia */
-img, video, iframe, embed, object {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* WhatsApp */
+.btn-gradient.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
 }
 
-/* Textos que não quebram */
-h1, h2, h3, h4, h5, h6, p, span, a, li, td, th {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
+/* LinkedIn */
+.btn-gradient.linkedin {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
 }
 
-/* ============ MOBILE FIRST (até 768px) ============ */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        line-height: 1.5;
-        -webkit-text-size-adjust: 100%; /* Evita zoom em iOS */
-    }
-    
-    /* Títulos responsivos */
-    h1 { font-size: 1.8rem !important; }
-    h2 { font-size: 1.5rem !important; }
-    h3 { font-size: 1.3rem !important; }
-    h4 { font-size: 1.1rem !important; }
-    
-    /* Reduz padding/margin excessivo */
-    .container, .container-fluid {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-    
-    /* Conteúdo em coluna única */
-    .row, .flex-row, .d-flex {
-        flex-direction: column !important;
-    }
-    
-    .col, .col-md, .col-lg {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
-    
-    /* Esconde alguns elementos em mobile se necessário */
-    .hide-mobile {
-        display: none !important;
-    }
-    
-    /* Botões e inputs maiores para touch */
-    button, .btn, input, textarea, select {
-        min-height: 44px !important; /* Tamanho mínimo para touch */
-    }
+/* GitHub */
+.btn-gradient.github {
+  background: linear-gradient(135deg, #333, #000);
+}
+.btn-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ============ TABLET (769px - 1024px) ============ */
-@media (min-width: 769px) and (max-width: 1024px) {
-    body {
-        font-size: 15px;
-    }
-    
-    h1 { font-size: 2rem !important; }
-    h2 { font-size: 1.7rem !important; }
-    
-    .container {
-        padding-left: 25px !important;
-        padding-right: 25px !important;
-    }
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
-/* ============ DESKTOP (acima de 1025px) ============ */
-@media (min-width: 1025px) {
-    /* Aqui você mantém os estilos desktop originais */
-    /* A menos que queira sobrepor algo específico */
+.btn-gradient .icon {
+  font-size: 1.1rem;
 }
 
+/* Email */
+.btn-gradient.email {
+  background: linear-gradient(135deg, #6b7280, #374151);
+}
+
+/* WhatsApp */
+.btn-gradient.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+/* LinkedIn */
+.btn-gradient.linkedin {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+/* GitHub */
+.btn-gradient.github {
+  background: linear-gradient(135deg, #333, #000);
+}
