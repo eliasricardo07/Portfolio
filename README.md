@@ -118,5 +118,5 @@ Landing page institucional
 
 ---
 
-🖤 **Elias Ricardo**  
+ **Elias Ricardo**  
 *Transformando dados em decisões inteligentes.*
